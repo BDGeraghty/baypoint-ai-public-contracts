@@ -19,6 +19,7 @@ Clients should validate final listing details and policy requirements before pub
 Related Links
 
 Endpoint: https://baypoint.ai/api/ai/listing-optimization/
+OpenAPI: https://baypoint.ai/docs/ai/openapi.yaml
 LLM discovery: https://baypoint.ai/llms.txt
 MCP manifest: https://baypoint.ai/.well-known/mcp.json
 License
