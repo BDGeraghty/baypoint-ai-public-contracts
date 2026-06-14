@@ -1,0 +1,26 @@
+{
+"meta": {
+"schema_version": "1.0.0",
+"endpoint_version": "v1",
+"generated_at": "2026-06-13T22:52:42.818176+00:00",
+"source": "baypoint-ai",
+"model_name": "Baypoint Scoring Model",
+"notes": [
+"Read-only informational endpoint",
+"Guidance only; verify final listing details on eBay"
+]
+},
+"definitions": {
+"baypoint_listing_intelligence_score": {
+"label": "Baypoint Listing Intelligence Score",
+"range": { "min": 0, "max": 100 },
+"description": "Composite quality score estimating listing readiness and discoverability."
+}
+},
+"links": {
+"docs_url": "https://baypoint.ai/docs/ai/listing-optimization",
+"openapi_url": "https://baypoint.ai/docs/ai/openapi.yaml",
+"llms_url": "https://baypoint.ai/llms.txt",
+"mcp_manifest_url": "https://baypoint.ai/.well-known/mcp.json"
+}
+}

@@ -1,0 +1,131 @@
+openapi: 3.1.0
+info:
+title: Baypoint AI Public API
+version: 1.0.0
+description: Public read-only API contracts for Baypoint AI.
+servers:
+
+url: https://baypoint.ai
+paths:
+/api/ai/listing-optimization/:
+get:
+operationId: getListingOptimizationInfobase
+summary: Listing optimization infobase
+description: Returns public guidance schema for Baypoint listing optimization.
+responses:
+'200':
+description: Successful response
+content:
+application/json:
+schema:
+$ref: '#/components/schemas/ListingOptimizationInfobase'
+components:
+schemas:
+ListingOptimizationInfobase:
+type: object
+required:
+- meta
+- definitions
+- scoring_model
+- recommendation_framework
+- common_mistakes
+- examples
+- compliance
+- links
+properties:
+meta:
+type: object
+properties:
+schema_version:
+type: string
+example: 1.0.0
+endpoint_version:
+type: string
+example: v1
+generated_at:
+type: string
+format: date-time
+source:
+type: string
+example: baypoint-ai
+model_name:
+type: string
+example: Baypoint Scoring Model
+notes:
+type: array
+items:
+type: string
+definitions:
+type: object
+properties:
+baypoint_listing_intelligence_score:
+type: object
+properties:
+label:
+type: string
+range:
+type: object
+properties:
+min:
+type: integer
+max:
+type: integer
+description:
+type: string
+score_bands:
+type: array
+items:
+type: object
+properties:
+min:
+type: integer
+max:
+type: integer
+label:
+type: string
+percentile_hint:
+type: string
+preview_task_status:
+type: array
+items:
+type: string
+optimization_job_status:
+type: array
+items:
+type: string
+scoring_model:
+type: object
+additionalProperties: true
+recommendation_framework:
+type: object
+additionalProperties: true
+common_mistakes:
+type: array
+items:
+type: object
+additionalProperties: true
+examples:
+type: object
+additionalProperties: true
+compliance:
+type: object
+properties:
+disclaimer:
+type: string
+policy_position:
+type: string
+links:
+type: object
+properties:
+docs_url:
+type: string
+format: uri
+openapi_url:
+type: string
+format: uri
+llms_url:
+type: string
+format: uri
+mcp_manifest_url:
+type: string
+format: uri
